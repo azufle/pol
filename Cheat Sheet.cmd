@@ -155,5 +155,6 @@ sh run_french_quarter.sh > >(tee -a output_french.txt) 2> >(tee -a error_french.
 sh run_san_francisco.sh > >(tee -a output_sanfranc.txt) 2> >(tee -a error_sanfranc.txt >&2)
 
 
+cd /home/datapaper/15months/3k
 
 

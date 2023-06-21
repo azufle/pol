@@ -1,7 +1,7 @@
 [
     {
         "actor": "PERSON",
-        "id": 144,
+        "id": 2114,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -15,7 +15,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 895,
+        "id": 809,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -29,7 +29,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 351,
+        "id": 2000,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -43,7 +43,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 345,
+        "id": 1028,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -57,7 +57,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 697,
+        "id": 84,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -71,7 +71,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 331,
+        "id": 1882,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -85,7 +85,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 989,
+        "id": 1440,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -99,7 +99,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 491,
+        "id": 1331,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -113,7 +113,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 871,
+        "id": 956,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -127,7 +127,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 14,
+        "id": 1107,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -141,7 +141,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 143,
+        "id": 1502,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -155,7 +155,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 739,
+        "id": 2049,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -169,7 +169,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 361,
+        "id": 353,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -183,7 +183,49 @@
     },
     {
         "actor": "PERSON",
-        "id": 235,
+        "id": 2565,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1388,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.75,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1570,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 2692,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -211,7 +253,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 153,
+        "id": 551,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -225,7 +267,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 412,
+        "id": 554,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -239,7 +281,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 821,
+        "id": 1924,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -253,7 +295,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 305,
+        "id": 57,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -267,7 +309,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 927,
+        "id": 1546,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -281,7 +323,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 63,
+        "id": 1450,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -295,7 +337,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 774,
+        "id": 2427,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -309,7 +351,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 913,
+        "id": 225,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -323,7 +365,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 986,
+        "id": 450,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -337,7 +379,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 535,
+        "id": 1153,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -351,7 +393,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 271,
+        "id": 1230,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -365,7 +407,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 951,
+        "id": 539,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -379,49 +421,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 646,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 282,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 947,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 144,
+        "id": 2114,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -435,7 +435,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 895,
+        "id": 809,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -449,7 +449,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 351,
+        "id": 2000,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -463,7 +463,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 345,
+        "id": 1028,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -477,7 +477,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 697,
+        "id": 84,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -491,7 +491,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 331,
+        "id": 1882,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -505,7 +505,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 989,
+        "id": 1440,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -519,7 +519,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 491,
+        "id": 1331,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -533,7 +533,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 871,
+        "id": 956,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -547,7 +547,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 14,
+        "id": 1107,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -561,7 +561,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 143,
+        "id": 1502,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -575,7 +575,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 739,
+        "id": 2049,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -589,7 +589,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 361,
+        "id": 353,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -603,7 +603,49 @@
     },
     {
         "actor": "PERSON",
-        "id": 235,
+        "id": 2565,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "fullnessDecreasePerStep",
+        "value": 2,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1388,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "fullnessDecreasePerStep",
+        "value": 1.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1570,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "fullnessDecreasePerStep",
+        "value": 3,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 2692,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -631,7 +673,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 153,
+        "id": 551,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -645,7 +687,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 412,
+        "id": 554,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -659,7 +701,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 821,
+        "id": 1924,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -673,7 +715,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 305,
+        "id": 57,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -687,7 +729,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 927,
+        "id": 1546,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -701,7 +743,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 63,
+        "id": 1450,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -715,7 +757,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 774,
+        "id": 2427,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -729,7 +771,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 913,
+        "id": 225,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -743,7 +785,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 986,
+        "id": 450,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -757,7 +799,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 535,
+        "id": 1153,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -771,7 +813,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 271,
+        "id": 1230,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -785,7 +827,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 951,
+        "id": 539,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -799,49 +841,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 646,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 282,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 947,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 622,
+        "id": 2746,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -855,7 +855,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 275,
+        "id": 1818,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -869,7 +869,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 769,
+        "id": 1659,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -883,7 +883,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 860,
+        "id": 1871,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -897,7 +897,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 711,
+        "id": 1524,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -911,7 +911,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 761,
+        "id": 185,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -925,7 +925,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 680,
+        "id": 1188,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -939,7 +939,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 957,
+        "id": 2643,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -953,7 +953,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 548,
+        "id": 1206,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -967,7 +967,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 39,
+        "id": 2880,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -981,7 +981,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 332,
+        "id": 1906,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -995,7 +995,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 886,
+        "id": 211,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -1009,7 +1009,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 336,
+        "id": 1877,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -1023,7 +1023,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 914,
+        "id": 1881,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -1037,7 +1037,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 643,
+        "id": 1796,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -1051,7 +1051,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 430,
+        "id": 810,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -1065,7 +1065,175 @@
     },
     {
         "actor": "PERSON",
-        "id": 485,
+        "id": 462,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1005,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.75,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1441,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 2432,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1815,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.75,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 826,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1722,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 2394,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.75,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 14,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1621,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 266,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0.75,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1197,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "keepingFullTimeInMinutes",
+        "value": 0,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1580,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
@@ -1093,175 +1261,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 885,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 863,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 467,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 185,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 598,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 228,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 232,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 985,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 798,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 62,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 276,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 753,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 18,
+        "id": 13,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1275,7 +1275,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 805,
+        "id": 2144,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1289,49 +1289,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 511,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 152,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 764,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 8,
+        "id": 12,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1359,7 +1317,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 556,
+        "id": 2796,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1373,7 +1331,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 385,
+        "id": 979,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1387,7 +1345,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 878,
+        "id": 2541,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1401,7 +1359,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 159,
+        "id": 1966,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1415,7 +1373,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 400,
+        "id": 81,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1429,7 +1387,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 461,
+        "id": 2167,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1443,7 +1401,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 377,
+        "id": 1731,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1457,7 +1415,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 836,
+        "id": 844,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1471,7 +1429,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 206,
+        "id": 2303,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1485,7 +1443,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 993,
+        "id": 2102,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1499,7 +1457,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 930,
+        "id": 1590,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1513,7 +1471,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 5,
+        "id": 1466,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1527,7 +1485,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 604,
+        "id": 2258,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1541,7 +1499,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 766,
+        "id": 2770,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1555,7 +1513,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 508,
+        "id": 2903,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1569,7 +1527,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 164,
+        "id": 2257,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1583,7 +1541,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 872,
+        "id": 352,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1597,7 +1555,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 219,
+        "id": 1705,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1611,7 +1569,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 288,
+        "id": 518,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1625,7 +1583,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 435,
+        "id": 470,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1639,7 +1597,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 896,
+        "id": 422,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1653,7 +1611,7 @@
     },
     {
         "actor": "PERSON",
-        "id": 433,
+        "id": 384,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
@@ -1667,7 +1625,49 @@
     },
     {
         "actor": "PERSON",
-        "id": 787,
+        "id": 1884,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "fullnessDecreasePerStep",
+        "value": 1.5,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 2230,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "fullnessDecreasePerStep",
+        "value": 3,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1228,
+        "steps": 129700,
+        "operator": "MULTIPLY",
+        "fieldName": "fullnessDecreasePerStep",
+        "value": 2,
+        "accessors": [
+            {
+                "manipulationType": "FIELD",
+                "name": "foodNeed"
+            }
+        ]
+    },
+    {
+        "actor": "PERSON",
+        "id": 1419,
         "steps": 129700,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
