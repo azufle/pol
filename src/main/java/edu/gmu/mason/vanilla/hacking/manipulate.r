@@ -2,7 +2,7 @@ library(jsonlite)
 set.seed(63)
 count <- 90
 id_min <- 0
-id_max <- 3000
+id_max <- 5000
 values_keep_full <- c(0, 0.5, 0.75)
 values_fullness_decrease <- c(3, 2, 1.5)
 
