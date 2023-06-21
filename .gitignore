@@ -50,7 +50,7 @@ nb-configuration.xml
 
 # hossein specific
 *.scratch.txt
-/examples/atlanta
+
 
 # OS
 .DS_Store

@@ -156,3 +156,4 @@ sh run_san_francisco.sh > >(tee -a output_sanfranc.txt) 2> >(tee -a error_sanfra
 
 
 
+

@@ -1,11 +1,15 @@
 library(jsonlite)
-count <- 30
+count <- 90
 id_min <- 0
-id_max <- 10000
+id_max <- 1000
 values_keep_full <- c(0, 0.5, 0.75)
 values_fullness_decrease <- c(3, 2, 1.5)
+
 agent_ids <- sample(id_min:id_max, count, replace = FALSE)
 
+agent_ids_1 <- agent_ids[1:30]
+agent_ids_2 <- agent_ids[31:60]
+agent_ids_3 <- agent_ids[61:90]
 
 json_keep_full <- '{
         "actor": "PERSON",
@@ -42,36 +46,70 @@ data_fullness_decrease <- fromJSON(json__fullness_decrease)
 
 print(values_keep_full)
 cat("[", "\n")
-for (i in seq(1, count, 3)) {
-    data_keep_full$id <- agent_ids[i]
+for (i in seq(1, length(agent_ids_1), 3)) {
+    data_keep_full$id <- agent_ids_1[i]
     data_keep_full$value <- values_keep_full[1]
     cat(toJSON(data_keep_full, auto_unbox = TRUE), ",", "\n")
 
-    data_keep_full$id <- agent_ids[i + 1]
+    data_keep_full$id <- agent_ids_1[i + 1]
     data_keep_full$value <- values_keep_full[2]
     cat(toJSON(data_keep_full, auto_unbox = TRUE), ",", "\n")
 
-    data_keep_full$id <- agent_ids[i + 2]
+    data_keep_full$id <- agent_ids_1[i + 2]
     data_keep_full$value <- values_keep_full[3]
     cat(toJSON(data_keep_full, auto_unbox = TRUE), ",", "\n")
 }
-cat("]\n")
+# cat("]\n")
 
 
 
-print(values_fullness_decrease)
+# print(values_fullness_decrease)
 
-cat("[", "\n")
-for (i in seq(1, count, 3)) {
-    data_fullness_decrease$id <- agent_ids[i]
+# cat("[", "\n")
+for (i in seq(1, length(agent_ids_1), 3)) {
+    data_fullness_decrease$id <- agent_ids_1[i]
     data_fullness_decrease$value <- values_fullness_decrease[1]
     cat(toJSON(data_fullness_decrease, auto_unbox = TRUE), ",", "\n")
 
-    data_fullness_decrease$id <- agent_ids[i + 1]
+    data_fullness_decrease$id <- agent_ids_1[i + 1]
     data_fullness_decrease$value <- values_fullness_decrease[2]
     cat(toJSON(data_fullness_decrease, auto_unbox = TRUE), ",", "\n")
 
-    data_fullness_decrease$id <- agent_ids[i + 2]
+    data_fullness_decrease$id <- agent_ids_1[i + 2]
+    data_fullness_decrease$value <- values_fullness_decrease[3]
+    cat(toJSON(data_fullness_decrease, auto_unbox = TRUE), ",", "\n")
+}
+
+for (i in seq(1, length(agent_ids_2), 3)) {
+    data_keep_full$id <- agent_ids_2[i]
+    data_keep_full$value <- values_keep_full[1]
+    cat(toJSON(data_keep_full, auto_unbox = TRUE), ",", "\n")
+
+    data_keep_full$id <- agent_ids_2[i + 1]
+    data_keep_full$value <- values_keep_full[2]
+    cat(toJSON(data_keep_full, auto_unbox = TRUE), ",", "\n")
+
+    data_keep_full$id <- agent_ids_2[i + 2]
+    data_keep_full$value <- values_keep_full[3]
+    cat(toJSON(data_keep_full, auto_unbox = TRUE), ",", "\n")
+}
+# cat("]\n")
+
+
+
+# print(values_fullness_decrease)
+
+# cat("[", "\n")
+for (i in seq(1, length(agent_ids_3), 3)) {
+    data_fullness_decrease$id <- agent_ids_3[i]
+    data_fullness_decrease$value <- values_fullness_decrease[1]
+    cat(toJSON(data_fullness_decrease, auto_unbox = TRUE), ",", "\n")
+
+    data_fullness_decrease$id <- agent_ids_3[i + 1]
+    data_fullness_decrease$value <- values_fullness_decrease[2]
+    cat(toJSON(data_fullness_decrease, auto_unbox = TRUE), ",", "\n")
+
+    data_fullness_decrease$id <- agent_ids_3[i + 2]
     data_fullness_decrease$value <- values_fullness_decrease[3]
     cat(toJSON(data_fullness_decrease, auto_unbox = TRUE), ",", "\n")
 }
