@@ -7,7 +7,7 @@ grep -n 2019-07-14T23:55:00.000 data.tsv
 head -n 38927105 data.tsv > warmup.tsv
 
 grep -n 2019-07-28T23:55:00.000 data.tsv
-sed -n '38927106,77255297p' data.tsv > normal.tsv sh   run_san_francisco.sh  | tee -a output.txt
+sed -n '38927106,77255297p' data.tsv > normal.tsv
 
 
 sed -n '77255298, $p' data.tsv > needle.tsv
