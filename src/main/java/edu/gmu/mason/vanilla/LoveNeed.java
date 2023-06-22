@@ -8,7 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
-import java.util.Random;
+// import java.util.Random;
 import java.util.stream.Collectors;
 
 import org.apache.commons.collections4.queue.CircularFifoQueue;
@@ -144,110 +144,113 @@ public class LoveNeed implements Need, java.io.Serializable {
 				Map<Pub, Double> pubDistanceList = agent.getCurrentUnit()
 						.getNearestPubDistanceMap(model.params.numberOfNearestPubs);
 
-				if (agent.isNeedle || (pubDistanceList != null && pubDistanceList.size() > 0)) {
+				if ((pubDistanceList != null && pubDistanceList.size() > 0)) {
+					// if (agent.isNeedle || (pubDistanceList != null && pubDistanceList.size() >
+					// 0)) {
 
 					VisitReason reason = VisitReason.None;
 					// this variable keeps the pub to go
 					Pub pubToGo = null;
 
-					if (agent.isNeedle) {
-						// go to a random
-						pubDistanceList = model.getAllUsablePubDistanceMap(agent.getAgentLocation());
-						System.out.println("RANDOM");
-						int randomPubIndex = new Random().nextInt(pubDistanceList.size());
-						int randomReasonIndex = new Random().nextInt(VisitReason.values().length);
+					// if (agent.isNeedle) {
+					// // go to a random
+					// pubDistanceList = model.getAllUsablePubDistanceMap(agent.getAgentLocation());
+					// System.out.println("RANDOM");
+					// int randomPubIndex = new Random().nextInt(pubDistanceList.size());
+					// int randomReasonIndex = new Random().nextInt(VisitReason.values().length);
 
-						pubToGo = (Pub) pubDistanceList.keySet().toArray()[randomPubIndex];
-						reason = VisitReason.values()[randomReasonIndex];
-						System.out.println("HOSSEIN: Needle " + agent.getAgentId() + " is going to a random pub "
-								+ randomPubIndex);
+					// pubToGo = (Pub) pubDistanceList.keySet().toArray()[randomPubIndex];
+					// reason = VisitReason.values()[randomReasonIndex];
+					// System.out.println("HOSSEIN: Needle " + agent.getAgentId() + " is going to a
+					// random pub "
+					// + randomPubIndex);
 
-					} else {
+					// } else {
 
-						if (pubDistanceList.size() == 1) {
-							pubToGo = pubDistanceList.keySet().iterator().next();
-							reason = VisitReason.Bar_ItWasTheOnlyChoice;
-						}
+					if (pubDistanceList.size() == 1) {
+						pubToGo = pubDistanceList.keySet().iterator().next();
+						reason = VisitReason.Bar_ItWasTheOnlyChoice;
+					}
 
-						Map<Long, Double> scoreMap = new LinkedHashMap<>();
+					Map<Long, Double> scoreMap = new LinkedHashMap<>();
 
-						// calculate each pub's score based on model coefficients
-						// and pub profile's similarity with the agent
-						for (Entry<Pub, Double> entry : pubDistanceList.entrySet()) {
-							PubChoiceSimilarity choiceSimilarity = getPubSimilarity(entry);
+					// calculate each pub's score based on model coefficients
+					// and pub profile's similarity with the agent
+					for (Entry<Pub, Double> entry : pubDistanceList.entrySet()) {
+						PubChoiceSimilarity choiceSimilarity = getPubSimilarity(entry);
 
-							double score = model.params.pubChoiceClosenessCoefficient * choiceSimilarity.closeness +
+						double score = model.params.pubChoiceClosenessCoefficient * choiceSimilarity.closeness +
 
-									model.params.pubChoiceAgeSimilarityCoefficient * choiceSimilarity.age +
+								model.params.pubChoiceAgeSimilarityCoefficient * choiceSimilarity.age +
 
-									model.params.pubChoiceIncomeSimilarityCoefficient * choiceSimilarity.income +
+								model.params.pubChoiceIncomeSimilarityCoefficient * choiceSimilarity.income +
 
-									model.params.pubChoiceInterestSimilarityCoefficient * choiceSimilarity.interest;
+								model.params.pubChoiceInterestSimilarityCoefficient * choiceSimilarity.interest;
 
-							scoreMap.put(entry.getKey().getId(), score);
-						}
+						scoreMap.put(entry.getKey().getId(), score);
+					}
 
-						// sort the map based on scores
-						scoreMap = scoreMap
-								.entrySet()
-								.stream()
-								.sorted(Map.Entry.comparingByValue(Comparator
-										.reverseOrder()))
-								.collect(
-										Collectors.toMap(Map.Entry::getKey,
-												Map.Entry::getValue, (oldValue,
-														newValue) -> oldValue,
-												LinkedHashMap::new));
+					// sort the map based on scores
+					scoreMap = scoreMap
+							.entrySet()
+							.stream()
+							.sorted(Map.Entry.comparingByValue(Comparator
+									.reverseOrder()))
+							.collect(
+									Collectors.toMap(Map.Entry::getKey,
+											Map.Entry::getValue, (oldValue,
+													newValue) -> oldValue,
+											LinkedHashMap::new));
 
-						int index = 1;
+					int index = 1;
 
-						// Apply a power function to pub scores. This is inspired by
-						// empirical mobility studies that finds Zipf's Law in top
-						// place choice.
-						for (java.util.Map.Entry<Long, Double> entry : scoreMap
-								.entrySet()) {
-							entry.setValue(Math.pow(
-									2,
-									Math.exp(entry.getValue()
-											* model.params.pubChoiceExponentialDecayConstant)));
-						}
+					// Apply a power function to pub scores. This is inspired by
+					// empirical mobility studies that finds Zipf's Law in top
+					// place choice.
+					for (java.util.Map.Entry<Long, Double> entry : scoreMap
+							.entrySet()) {
+						entry.setValue(Math.pow(
+								2,
+								Math.exp(entry.getValue()
+										* model.params.pubChoiceExponentialDecayConstant)));
+					}
 
-						// We use the scores to calculate a probabilities and choose
-						// one randomly.
-						MersenneTwisterWrapper rng = new MersenneTwisterWrapper(
-								model.random);
+					// We use the scores to calculate a probabilities and choose
+					// one randomly.
+					MersenneTwisterWrapper rng = new MersenneTwisterWrapper(
+							model.random);
 
-						int[] singletons = new int[scoreMap.size()];
-						double[] probabilities = new double[scoreMap.size()];
+					int[] singletons = new int[scoreMap.size()];
+					double[] probabilities = new double[scoreMap.size()];
 
-						index = 0;
-						for (java.util.Map.Entry<Long, Double> entry : scoreMap
-								.entrySet()) {
-							singletons[index] = entry.getKey().intValue();
-							probabilities[index++] = entry.getValue();
-						}
+					index = 0;
+					for (java.util.Map.Entry<Long, Double> entry : scoreMap
+							.entrySet()) {
+						singletons[index] = entry.getKey().intValue();
+						probabilities[index++] = entry.getValue();
+					}
 
-						EnumeratedIntegerDistribution distribution = null;
+					EnumeratedIntegerDistribution distribution = null;
 
-						try {
-							distribution = new EnumeratedIntegerDistribution(rng,
-									singletons, probabilities);
-						} catch (Exception exp) {
-							exp.printStackTrace();
-						}
+					try {
+						distribution = new EnumeratedIntegerDistribution(rng,
+								singletons, probabilities);
+					} catch (Exception exp) {
+						exp.printStackTrace();
+					}
 
-						int chosenPubId = distribution.sample();
+					int chosenPubId = distribution.sample();
 
-						for (Entry<Pub, Double> entry : pubDistanceList.entrySet()) {
-							if (entry.getKey().getId() == chosenPubId) {
+					for (Entry<Pub, Double> entry : pubDistanceList.entrySet()) {
+						if (entry.getKey().getId() == chosenPubId) {
 
-								pubToGo = entry.getKey();
-								PubChoiceSimilarity similarity = getPubSimilarity(entry);
-								reason = similarity.getReason();
-								break;
-							}
+							pubToGo = entry.getKey();
+							PubChoiceSimilarity similarity = getPubSimilarity(entry);
+							reason = similarity.getReason();
+							break;
 						}
 					}
+					// }//isNeedle
 					if (pubToGo != null) {
 						// get a visit length between min and max minutes as
 						// specified in model parameters.

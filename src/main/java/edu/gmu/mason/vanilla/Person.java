@@ -67,7 +67,7 @@ public class Person implements Steppable, java.io.Serializable {
 	@State
 	private int neighborhoodId;
 
-	public boolean isNeedle = false;
+	// public boolean isNeedle = false;
 
 	@State
 	private double age;
