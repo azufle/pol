@@ -40,7 +40,7 @@ pwd > info.txt
 date >> info.txt
 echo $ head data.tsv >> info.txt
 head data.tsv >> info.txt
-echo $ tail data.tsv >> info.txt> >(tee -a output_$dir.txt) 2> >(tee -a error_$dir.txt >&2)
+echo $ tail data.tsv >> info.txt
 tail data.tsv >> info.txt
 echo ----------------------------------- >> info.txt
 echo $ head warmup.tsv >> info.txt
@@ -58,6 +58,10 @@ head test.tsv >> info.txt
 echo $ tail test.tsv >> info.txt
 tail test.tsv >> info.txt
 
+zip  test.tsv.zip test.tsv
+zip  train.tsv.zip train.tsv
+
+
 #Check files:
 diff normal.tsv /home/research/c2/pol/examples/logs/logs/2023-05-27/normal.tsv
 diff normal.tsv /home/research/c3/pol/examples/logs/logs/2023-05-27/normal.tsv
@@ -67,7 +71,7 @@ diff normal.tsv /home/research/c6/pol/examples/logs/logs/2023-05-27/normal.tsv
 
 
 #Copy to Drive:
-rclone copy info.txt googledrive:"/Andreas/Data Preparation/dataset.v3"
+rclone copy info.txt googledrive:"/Andreas/Data Preparation/dataset.v4"
 rclone copy normal.tsv googledrive:"/Andreas/Data Preparation/dataset.v2"
 rclone copy needle.tsv googledrive:"/Andreas/Data Preparation/dataset.v2"
 
