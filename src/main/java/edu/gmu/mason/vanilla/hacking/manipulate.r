@@ -2,7 +2,7 @@ library(jsonlite)
 set.seed(63)
 count <- 90
 id_min <- 0
-id_max <- 1000
+id_max <- 10000
 values_keep_full <- c(0, 0.5, 0.75)
 values_fullness_decrease <- c(3, 2, 1.5)
 
@@ -15,7 +15,7 @@ agent_ids_3 <- agent_ids[61:90]
 json_keep_full <- '{
         "actor": "PERSON",
         "id": 0,
-        "steps": 1045440,
+        "steps": 129600,
         "operator": "MULTIPLY",
         "fieldName": "keepingFullTimeInMinutes",
         "value": "0",
@@ -30,7 +30,7 @@ json_keep_full <- '{
 json__fullness_decrease <- '{
         "actor": "PERSON",
         "id": 0,
-        "steps": 1045440,
+        "steps": 129600,
         "operator": "MULTIPLY",
         "fieldName": "fullnessDecreasePerStep",
         "value": "0",
