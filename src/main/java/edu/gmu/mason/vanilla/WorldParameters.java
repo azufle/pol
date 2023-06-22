@@ -46,10 +46,10 @@ public class WorldParameters extends AnnotatedPropertied {
 	public static final int NUM_WORKPLACES_PER_1000 = 250;
 	public static final int NUM_PUBS_PER_1000 = 10;
 	public static final int NUM_RESTAURANTS_PER_1000 = 20;
-	public static final int NUM_OF_AGENTS = 10000;
+	public static final int NUM_OF_AGENTS = 1000;
 	public static final int NUM_OF_AGENT_INTERESTS = 10;
 	public static final double BASE_RENT_RATE = 500;
-	public static final String DEFAULT_MAPS = "san_francisco";
+	public static final String DEFAULT_MAPS = "gmu_campus";
 
 	// MODEL
 	public static final int BASE_AGENT_AGE = 18;
@@ -89,7 +89,6 @@ public class WorldParameters extends AnnotatedPropertied {
 	public static final double MAX_LONELY_DAYS = 7;
 	public static final double NETWORK_WEIGHT_UPPER_BOUND = 1.0;
 	public static final int STABLE_RELATIONSHIP_PERIOD_IN_MIN = 60;
-
 
 	// PUB
 	public static final int NUMBER_OF_NEAREST_PUBS = 5;
@@ -292,18 +291,17 @@ public class WorldParameters extends AnnotatedPropertied {
 	@EditableProperty(group = "Init", description = "Minimum number of visitor logs required to create a place profile", lower = "10", upper = "200", readOnly = false)
 	public int minNumberOfVisitorLogsRequiredForPlaceProfile;
 
-
 	// social network visualization
 	@Skip
 	public boolean isFriendFamilyGraphVisible;
 	@Skip
 	public boolean isWorkGraphVisible;
 
-
 	public WorldParameters() {
 	}
 
-	public WorldParameters(String fileName) throws IllegalArgumentException, IllegalAccessException, ConfigurationException {
+	public WorldParameters(String fileName)
+			throws IllegalArgumentException, IllegalAccessException, ConfigurationException {
 		this();
 		Parameters params = new Parameters();
 		File propertiesFile = new File(fileName);
@@ -311,8 +309,8 @@ public class WorldParameters extends AnnotatedPropertied {
 		CustomConversionHandler handler = new CustomConversionHandler();
 		FileBasedConfigurationBuilder<FileBasedConfiguration> builder = new FileBasedConfigurationBuilder<FileBasedConfiguration>(
 				PropertiesConfiguration.class)
-						.configure(params.fileBased().setFile(propertiesFile).setConversionHandler(handler)
-								.setListDelimiterHandler(new DefaultListDelimiterHandler(',')));
+				.configure(params.fileBased().setFile(propertiesFile).setConversionHandler(handler)
+						.setListDelimiterHandler(new DefaultListDelimiterHandler(',')));
 		Configuration conf = builder.getConfiguration();
 
 		Field[] fields = WorldParameters.class.getDeclaredFields();
@@ -322,7 +320,7 @@ public class WorldParameters extends AnnotatedPropertied {
 			mod = fields[i].getModifiers();
 			if ((mod & skipMod) == 0 || fields[i].getName().equals("a")) {
 				String key = fields[i].getName();
-				if(!conf.containsKey(key))
+				if (!conf.containsKey(key))
 					continue;
 				Object value = conf.get((Class<?>) fields[i].getType(), key);
 
@@ -345,7 +343,7 @@ public class WorldParameters extends AnnotatedPropertied {
 
 		Field[] fields = WorldParameters.class.getDeclaredFields();
 		int mod;
-		int skipMod = Modifier.STATIC | Modifier.VOLATILE | Modifier.TRANSIENT |  Modifier.FINAL;
+		int skipMod = Modifier.STATIC | Modifier.VOLATILE | Modifier.TRANSIENT | Modifier.FINAL;
 		for (int i = 0; i < fields.length; i++) {
 			mod = fields[i].getModifiers();
 			if ((mod & skipMod) == 0) {

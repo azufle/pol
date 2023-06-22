@@ -1,1682 +1,452 @@
 [
     {
         "actor": "PERSON",
-        "id": 2114,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4905,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 2000,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 2000,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 4180,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5124,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 1882,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1107,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1502,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2049,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3316,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3451,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3219,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4449,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2565,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1570,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2692,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4443,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 551,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4650,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2997,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1924,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4153,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1450,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4321,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4546,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3853,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 539,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1659,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4281,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1188,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3413,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2114,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4905,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2000,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4180,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5124,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 1882,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 1107,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 1882,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 5052,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 5052,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 9299,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 9299,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 1502,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 2049,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 1502,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 3316,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 3316,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 3451,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 3451,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 3219,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 4449,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 3219,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 2565,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5484,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 1570,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5484,
+        "steps": 14112,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 9762,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 9762,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 2692,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 4443,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 2692,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 551,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 8743,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 8743,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 7475,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 7475,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 4650,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 2997,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 4650,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 1924,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5642,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 4153,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5642,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 1450,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 9642,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 9642,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 6523,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 6523,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 4321,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 4321,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 4546,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 4546,
+        "steps": 15264,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": false,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 3853,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 539,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 5249,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 1659,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 8731,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
-        "id": 4281,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "id": 6842,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 5914,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 9851,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 5620,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 1188,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
+    },
+    {
+        "actor": "PERSON",
+        "id": 5302,
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     },
     {
         "actor": "PERSON",
         "id": 3413,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 211,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1877,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1881,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4906,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3996,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4558,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3344,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2432,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3956,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4922,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4110,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1621,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4362,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4146,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3574,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3671,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 13,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2144,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 12,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4788,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2541,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1966,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 81,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3661,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3840,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3619,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1731,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 844,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3719,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3166,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "keepingFullTimeInMinutes",
-        "value": 0.75,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1590,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2770,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2257,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 352,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1705,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 518,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4566,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 422,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3244,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4480,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4042,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3405,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3941,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3155,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 1419,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2170,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4603,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2139,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 748,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 902,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 396,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4876,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4252,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 4092,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3089,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 795,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 2454,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3060,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 3,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 226,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 2,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
-    },
-    {
-        "actor": "PERSON",
-        "id": 3867,
-        "steps": 129700,
-        "operator": "MULTIPLY",
-        "fieldName": "fullnessDecreasePerStep",
-        "value": 1.5,
-        "accessors": [
-            {
-                "manipulationType": "FIELD",
-                "name": "foodNeed"
-            }
-        ]
+        "steps": 13248,
+        "operator": "SET",
+        "fieldName": "isNeedle",
+        "value": true,
+        "accessors": []
     }
 ]

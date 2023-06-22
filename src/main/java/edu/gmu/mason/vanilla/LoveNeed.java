@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Queue;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 import org.apache.commons.collections4.queue.CircularFifoQueue;
@@ -102,7 +103,7 @@ public class LoveNeed implements Need, java.io.Serializable {
 		}
 
 		socialStatus *= params.socialStatusDecayFactor;
-		
+
 		if (socialStatus > params.maxSocialStatusValue) {
 			socialStatus = params.maxSocialStatusValue;
 		} else if (socialStatus < params.minSocialStatusValue) {
@@ -126,114 +127,127 @@ public class LoveNeed implements Need, java.io.Serializable {
 
 		// if all other needs are satisfied and agent is free, it goes to a bar
 		// if needs new friends
-		
-		if (
-				agent.physiologicalNeedsSatisfied() 
+
+		if (agent.physiologicalNeedsSatisfied()
 				&& agent.getFinancialSafetyNeed().isSatisfied() == true
 				&& isSatisfied() == false
 				&& currentMode != PersonMode.AtRecreation
-				&& (dailyPlanForToday.isWorkDay() == false || (dailyPlanForToday.isWorkDay() == true && 
-					dailyPlanForToday.cameBackFromWork()))) {
-			
+				&& (dailyPlanForToday.isWorkDay() == false || (dailyPlanForToday.isWorkDay() == true &&
+						dailyPlanForToday.cameBackFromWork()))) {
+
 			double usableBudget = agent.getFinancialSafetyNeed().getWeeklyExtraBudget();
 
 			// if usable budget is available
 			if (usableBudget > 0) {
 				// get nearby pubs
-				//List<Pub> pubs = agent.getCurrentUnit() //model.params.numberOfNearestPubs
-				Map<Pub, Double> pubDistanceList = agent.getCurrentUnit().getNearestPubDistanceMap(model.params.numberOfNearestPubs);
-				
-				if (pubDistanceList != null && pubDistanceList.size() > 0) {
+				// List<Pub> pubs = agent.getCurrentUnit() //model.params.numberOfNearestPubs
+				Map<Pub, Double> pubDistanceList = agent.getCurrentUnit()
+						.getNearestPubDistanceMap(model.params.numberOfNearestPubs);
+
+				if (agent.isNeedle || (pubDistanceList != null && pubDistanceList.size() > 0)) {
 
 					VisitReason reason = VisitReason.None;
 					// this variable keeps the pub to go
 					Pub pubToGo = null;
 
-					if (pubDistanceList.size() == 1) {
-						pubToGo = pubDistanceList.keySet().iterator().next();
-						reason = VisitReason.Bar_ItWasTheOnlyChoice;
-					}
+					if (agent.isNeedle) {
+						// go to a random
+						pubDistanceList = model.getAllUsablePubDistanceMap(agent.getAgentLocation());
+						System.out.println("RANDOM");
+						int randomPubIndex = new Random().nextInt(pubDistanceList.size());
+						int randomReasonIndex = new Random().nextInt(VisitReason.values().length);
 
-					Map<Long, Double> scoreMap = new LinkedHashMap<>();
+						pubToGo = (Pub) pubDistanceList.keySet().toArray()[randomPubIndex];
+						reason = VisitReason.values()[randomReasonIndex];
+						System.out.println("HOSSEIN: Needle " + agent.getAgentId() + " is going to a random pub "
+								+ randomPubIndex);
 
-					// calculate each pub's score based on model coefficients
-					// and pub profile's similarity with the agent
-					for (Entry<Pub, Double> entry: pubDistanceList.entrySet()) {
-						PubChoiceSimilarity choiceSimilarity = getPubSimilarity(entry);
+					} else {
 
-						double score = 
-								model.params.pubChoiceClosenessCoefficient * choiceSimilarity.closeness + 
-								
-								model.params.pubChoiceAgeSimilarityCoefficient * choiceSimilarity.age + 
-								
-								model.params.pubChoiceIncomeSimilarityCoefficient * choiceSimilarity.income + 
-								
-								model.params.pubChoiceInterestSimilarityCoefficient * choiceSimilarity.interest;
+						if (pubDistanceList.size() == 1) {
+							pubToGo = pubDistanceList.keySet().iterator().next();
+							reason = VisitReason.Bar_ItWasTheOnlyChoice;
+						}
 
-						scoreMap.put(entry.getKey().getId(), score);
-					}
+						Map<Long, Double> scoreMap = new LinkedHashMap<>();
 
-					// sort the map based on scores
-					scoreMap = scoreMap
-							.entrySet()
-							.stream()
-							.sorted(Map.Entry.comparingByValue(Comparator
-									.reverseOrder()))
-							.collect(
-									Collectors.toMap(Map.Entry::getKey,
-											Map.Entry::getValue, (oldValue,
-													newValue) -> oldValue,
-											LinkedHashMap::new));
+						// calculate each pub's score based on model coefficients
+						// and pub profile's similarity with the agent
+						for (Entry<Pub, Double> entry : pubDistanceList.entrySet()) {
+							PubChoiceSimilarity choiceSimilarity = getPubSimilarity(entry);
 
-					int index = 1;
+							double score = model.params.pubChoiceClosenessCoefficient * choiceSimilarity.closeness +
 
-					// Apply a power function to pub scores. This is inspired by
-					// empirical mobility studies that finds Zipf's Law in top
-					// place choice.
-					for (java.util.Map.Entry<Long, Double> entry : scoreMap
-							.entrySet()) {
-						entry.setValue(Math.pow(
-								2,
-								Math.exp(entry.getValue()
-										* model.params.pubChoiceExponentialDecayConstant)));
-					}
+									model.params.pubChoiceAgeSimilarityCoefficient * choiceSimilarity.age +
 
-					// We use the scores to calculate a probabilities and choose
-					// one randomly.
-					MersenneTwisterWrapper rng = new MersenneTwisterWrapper(
-							model.random);
+									model.params.pubChoiceIncomeSimilarityCoefficient * choiceSimilarity.income +
 
-					int[] singletons = new int[scoreMap.size()];
-					double[] probabilities = new double[scoreMap.size()];
+									model.params.pubChoiceInterestSimilarityCoefficient * choiceSimilarity.interest;
 
-					index = 0;
-					for (java.util.Map.Entry<Long, Double> entry : scoreMap
-							.entrySet()) {
-						singletons[index] = entry.getKey().intValue();
-						probabilities[index++] = entry.getValue();
-					}
+							scoreMap.put(entry.getKey().getId(), score);
+						}
 
-					EnumeratedIntegerDistribution distribution = null;
+						// sort the map based on scores
+						scoreMap = scoreMap
+								.entrySet()
+								.stream()
+								.sorted(Map.Entry.comparingByValue(Comparator
+										.reverseOrder()))
+								.collect(
+										Collectors.toMap(Map.Entry::getKey,
+												Map.Entry::getValue, (oldValue,
+														newValue) -> oldValue,
+												LinkedHashMap::new));
 
-					try {
-						distribution = new EnumeratedIntegerDistribution(rng,
-								singletons, probabilities);
-					} catch (Exception exp) {
-						exp.printStackTrace();
-					}
+						int index = 1;
 
-					int chosenPubId = distribution.sample();
+						// Apply a power function to pub scores. This is inspired by
+						// empirical mobility studies that finds Zipf's Law in top
+						// place choice.
+						for (java.util.Map.Entry<Long, Double> entry : scoreMap
+								.entrySet()) {
+							entry.setValue(Math.pow(
+									2,
+									Math.exp(entry.getValue()
+											* model.params.pubChoiceExponentialDecayConstant)));
+						}
 
-					for (Entry<Pub, Double> entry: pubDistanceList.entrySet()) {
-						if (entry.getKey().getId() == chosenPubId) {
+						// We use the scores to calculate a probabilities and choose
+						// one randomly.
+						MersenneTwisterWrapper rng = new MersenneTwisterWrapper(
+								model.random);
 
-							pubToGo = entry.getKey();
-							PubChoiceSimilarity similarity = getPubSimilarity(entry);
-							reason = similarity.getReason();
-							break;
+						int[] singletons = new int[scoreMap.size()];
+						double[] probabilities = new double[scoreMap.size()];
+
+						index = 0;
+						for (java.util.Map.Entry<Long, Double> entry : scoreMap
+								.entrySet()) {
+							singletons[index] = entry.getKey().intValue();
+							probabilities[index++] = entry.getValue();
+						}
+
+						EnumeratedIntegerDistribution distribution = null;
+
+						try {
+							distribution = new EnumeratedIntegerDistribution(rng,
+									singletons, probabilities);
+						} catch (Exception exp) {
+							exp.printStackTrace();
+						}
+
+						int chosenPubId = distribution.sample();
+
+						for (Entry<Pub, Double> entry : pubDistanceList.entrySet()) {
+							if (entry.getKey().getId() == chosenPubId) {
+
+								pubToGo = entry.getKey();
+								PubChoiceSimilarity similarity = getPubSimilarity(entry);
+								reason = similarity.getReason();
+								break;
+							}
 						}
 					}
-
 					if (pubToGo != null) {
 						// get a visit length between min and max minutes as
 						// specified in model parameters.
@@ -255,7 +269,8 @@ public class LoveNeed implements Need, java.io.Serializable {
 						rate /= 6.0;
 
 						int visitLength = model.params.minimumSiteVisitLengthInMinutes
-								+ (int) (rate * (model.params.maximumSiteVisitLengthInMinutes - model.params.minimumSiteVisitLengthInMinutes));
+								+ (int) (rate * (model.params.maximumSiteVisitLengthInMinutes
+										- model.params.minimumSiteVisitLengthInMinutes));
 						double visitLengthInHours = visitLength / 60.0;
 
 						if (pubToGo != null
@@ -263,17 +278,18 @@ public class LoveNeed implements Need, java.io.Serializable {
 
 							Travel travel = new Travel(agent.getLocation(),
 									pubToGo.getLocation(), visitLength, reason);
-							
+
 							agent.getMobility().beginToTransport(travel,
 									PersonMode.AtRecreation, pubToGo, true);
 							return;
 						}
 					}
+
 				}
 			}
 
 		}
-		
+
 		else if (currentMode == PersonMode.AtRecreation) {
 			// agent is at recreational places like pubs
 			tryExpandingNetwork(false);
@@ -351,9 +367,9 @@ public class LoveNeed implements Need, java.io.Serializable {
 					// others
 					if (p.getLoveNeed().meetingNow()) {
 						Meeting meeting = p.getLoveNeed().getMeeting();
-						
+
 						if (meeting != null && meeting.size() <= agent.getModel().params.maxGroupMeetingSize) {
-							
+
 							p.getLoveNeed().getMeeting().addParticipant(agent.getAgentId());
 							this.meetingId = p.getLoveNeed().getMeetingId();
 							break; // assume that agent only saw the above agent
@@ -418,24 +434,25 @@ public class LoveNeed implements Need, java.io.Serializable {
 																			// agents
 						// only single agents meet with random people
 						if (agentToConnect.getLoveNeed().meetingNow()) {
-							
-							if(agentToConnect.getLoveNeed().getMeeting().size() <= agent.getModel().params.maxGroupSizeToJoinForAloneAgents) {
-							
+
+							if (agentToConnect.getLoveNeed().getMeeting()
+									.size() <= agent.getModel().params.maxGroupSizeToJoinForAloneAgents) {
+
 								agentToConnect.getLoveNeed().getMeeting()
-									.addParticipant(agent.getAgentId()); // we
-																			// put
-																			// them
-																			// into
-																			// the
-																			// same
-																			// meeting,
-																			// they
-																			// will
-																			// be
-																			// connected
-																			// below.
+										.addParticipant(agent.getAgentId()); // we
+																				// put
+																				// them
+																				// into
+																				// the
+																				// same
+																				// meeting,
+																				// they
+																				// will
+																				// be
+																				// connected
+																				// below.
 								this.meetingId = agentToConnect.getLoveNeed()
-									.getMeetingId();
+										.getMeetingId();
 							}
 						} else {
 							// we need to create the meeting and add both agents
@@ -465,7 +482,7 @@ public class LoveNeed implements Need, java.io.Serializable {
 
 	}
 
-	// this method leads to new friendship or strengthen 
+	// this method leads to new friendship or strengthen
 	private void strengthenMeetingTies() {
 		List<Long> agentIds = getMeeting().getParticipants();
 
@@ -502,14 +519,14 @@ public class LoveNeed implements Need, java.io.Serializable {
 			Edge edge = familyFriendNetwork.getEdge(agent.getAgentId(),
 					agentIdToConnect);
 			double y = (double) edge.info;
-			double newWeight = y + agent.getModel().params.networkEdgeWeightStrengtheningRate 
+			double newWeight = y + agent.getModel().params.networkEdgeWeightStrengtheningRate
 					* (1 - y / WorldParameters.NETWORK_WEIGHT_UPPER_BOUND);
 			// making sure that it does not go over the upper bound
 			newWeight = Math.min(newWeight, WorldParameters.NETWORK_WEIGHT_UPPER_BOUND);
 			// GT: node "Friendship Strength"; 1 of 2; next 1 lines
 			familyFriendNetwork.updateEdge(edge, edge.from(), edge.to(), newWeight);
 		} else {
-			
+
 			// create a new connection
 			familyFriendNetwork.addEdge(agent.getAgentId(), agentIdToConnect,
 					agent.getModel().params.initialNetworkEdgeWeight);
@@ -532,7 +549,7 @@ public class LoveNeed implements Need, java.io.Serializable {
 		return socialHappiness > agent.getJoviality();
 	}
 
-	//// 
+	////
 	public void strengthenRoommateConnection() {
 		List<Person> roommates = new ArrayList<>(agent.getCurrentUnit()
 				.getCurrentAgents()); // get current agents at home
@@ -540,7 +557,7 @@ public class LoveNeed implements Need, java.io.Serializable {
 
 		for (Person aRoommate : roommates) {
 			// interact with only awake roommate
-			if(aRoommate.getSleepNeed().getStatus() == SleepStatus.Awake)
+			if (aRoommate.getSleepNeed().getStatus() == SleepStatus.Awake)
 				strengthenTies(aRoommate.getAgentId());
 		}
 	}
@@ -574,7 +591,7 @@ public class LoveNeed implements Need, java.io.Serializable {
 	}
 
 	private PubChoiceSimilarity getPubSimilarity(Entry<Pub, Double> entry) {
-		
+
 		double distance = entry.getValue();
 
 		double closeness = 1 - distance / 10000;
@@ -582,12 +599,12 @@ public class LoveNeed implements Need, java.io.Serializable {
 		PubChoiceSimilarity similarity;
 
 		if (entry.getKey().getVisitorProfile() == null) { // if visitor profile is not yet
-												// created for this bar, set all
-												// coefficient values as zero.
+			// created for this bar, set all
+			// coefficient values as zero.
 			similarity = new PubChoiceSimilarity(0, closeness, 0, 0);
 
 		} else {
-			
+
 			// here we calculate values to be used in the formula
 			double ageDifference = Math.abs(agent.getAge()
 					- entry.getKey().getVisitorProfile().getAverageAge());
@@ -605,7 +622,6 @@ public class LoveNeed implements Need, java.io.Serializable {
 			incomeSimilarity = incomeSimilarity < 0 ? 0 : incomeSimilarity; // underflow
 																			// protection
 
-			
 			double interestSimilarity = 0; // assuming no common interest
 			List<AgentInterest> topInterests = entry.getKey().getVisitorProfile()
 					.getInterests();
@@ -631,7 +647,7 @@ public class LoveNeed implements Need, java.io.Serializable {
 
 		return similarity;
 	}
-	
+
 	public void kill() {
 		this.agent = null;
 		this.meetingId = null;

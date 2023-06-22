@@ -16,6 +16,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -1236,6 +1237,14 @@ public class WorldModel extends SimState {
 
 	public Restaurant getRestaurant(long id) {
 		return restaurants.get(id);
+	}
+
+	public Map<Pub, Double> getAllUsablePubDistanceMap(MasonGeometry geom) {
+		Map<Pub, Double> pubs = new HashMap<Pub, Double>();
+		for (Pub pub : getUsablePubs()) {
+			pubs.put(pub, spatialNetwork.getDistance(geom, pub.getLocation()));
+		}
+		return pubs;
 	}
 
 	public List<Pub> getNearestPubs(MasonGeometry geom, int numberOfPubs) {

@@ -25,7 +25,7 @@ import sim.util.geo.MasonGeometry;
 
 /**
  * General description_________________________________________________________
- * A base class to represent units inside a building. 
+ * A base class to represent units inside a building.
  *
  * @author Hamdi Kavak (hkavak at gmu.edu)
  * 
@@ -52,7 +52,7 @@ public abstract class BuildingUnit implements java.io.Serializable {
 	@Characteristics
 	private int blockGroupId;
 	@Characteristics
-	private int censusTractId;	
+	private int censusTractId;
 	@State
 	private int numOfAgents;
 	@State
@@ -66,9 +66,9 @@ public abstract class BuildingUnit implements java.io.Serializable {
 	@Skip
 	private Map<Long, Visit> visitMap;
 	@Skip
-	private Map<Long,Double> nearestRestaurantCostMap;
+	private Map<Long, Double> nearestRestaurantCostMap;
 	@Skip
-	private Map<Long,Double> nearestPubDistanceMap;
+	private Map<Long, Double> nearestPubDistanceMap;
 	@Skip
 	private long meetingIdIndexCounter;
 	protected WorldModel model;
@@ -85,58 +85,59 @@ public abstract class BuildingUnit implements java.io.Serializable {
 		this.meetingIdIndexCounter = 0;
 		this.type = type;
 		// new variable for logging
-		agentSet = visitMap.keySet(); 
+		agentSet = visitMap.keySet();
 		numOfAgents = 0;
 		numOfVisits = 0;
 	}
-	
+
 	public List<Person> getCurrentAgents() {
 		List<Person> agents = new ArrayList<Person>();
-		
-		for (long id: visitMap.keySet()) {
+
+		for (long id : visitMap.keySet()) {
 			agents.add(model.getAgent(id));
 		}
-		
+
 		return agents;
 	}
-	
+
 	/**
 	 * This method removes the given agent from meetings and visit lists
+	 * 
 	 * @param agentId
 	 */
-	public void removeAgentPresence(long agentId){
-		for (Meeting meeting: meetingMap.values()){
+	public void removeAgentPresence(long agentId) {
+		for (Meeting meeting : meetingMap.values()) {
 			meeting.removeParticipant(agentId);
 		}
-		
+
 		if (visitMap.containsKey(agentId) == true) {
 			visitMap.remove(agentId);
 		}
 		numOfAgents = visitMap.size();
 	}
 
-	protected LocalDateTime getAgentArrival (long agentId) {
+	protected LocalDateTime getAgentArrival(long agentId) {
 		return visitMap.get(agentId).getArrivalTime();
 	}
-	
+
 	public void agentArrives(Person agent, double visitLength) {
 		visitMap.put(agent.getAgentId(), new Visit(agent.getSimulationTime(), visitLength));
 		numOfAgents = visitMap.size();
 	}
-	
+
 	public void agentLeaves(Person agent) {
 		if (agent.getLoveNeed().meetingNow() == true) {
 			Long meetingId = agent.getLoveNeed().getMeetingId();
-			
+
 			meetingMap.get(meetingId).removeParticipant(agent.getAgentId());
 			agent.getLoveNeed().setMeetingId(null);
-			
+
 			// get rid of the meeting object if there is only one agents
 			if (meetingMap.get(meetingId).size() == 1) {
 				long lastAgentsId = meetingMap.get(meetingId).getParticipants().get(0);
 				meetingMap.get(meetingId).removeParticipant(lastAgentsId);
 				model.getAgent(lastAgentsId).getLoveNeed().setMeetingId(null);
-				
+
 				meetingMap.remove(meetingId);
 			}
 		}
@@ -144,14 +145,13 @@ public abstract class BuildingUnit implements java.io.Serializable {
 		numOfAgents = visitMap.size();
 		numOfVisits++;
 	}
-	
+
 	private void readObject(java.io.ObjectInputStream aInputStream) throws ClassNotFoundException, IOException {
 		aInputStream.defaultReadObject();
-		if(visitMap!=null)
+		if (visitMap != null)
 			agentSet = visitMap.keySet();
 	}
 
-	
 	public Long createNewMeeting(boolean planned, Long agent1Id, Long agent2Id, LocalDateTime meetingStartTime) {
 		this.meetingIdIndexCounter++;
 		Long meetingId = new Long(this.meetingIdIndexCounter);
@@ -160,27 +160,27 @@ public abstract class BuildingUnit implements java.io.Serializable {
 
 		meeting.addParticipant(agent1Id);
 		meeting.addParticipant(agent2Id);
-		
+
 		meetingMap.put(meetingId, meeting);
-		
+
 		return meetingId;
 	}
-	
+
 	public Meeting getMeeting(Long meetingId) {
 		return meetingMap.get(meetingId);
 	}
-	
-	public List<Meeting> getAllMeetings(){
+
+	public List<Meeting> getAllMeetings() {
 		return meetingMap.values().stream().collect(Collectors.toList());
 	}
-	
-	public boolean isTimeToLeaveForAgent(Person agent){
+
+	public boolean isTimeToLeaveForAgent(Person agent) {
 		Visit visit = visitMap.get(agent.getAgentId());
 		int minuteDiff = Minutes.minutesBetween(visit.getArrivalTime(), agent.getSimulationTime()).getMinutes();
-		
+
 		return minuteDiff >= visit.getVisitLength();
 	}
-	
+
 	public MasonGeometry getLocation() {
 		return location;
 	}
@@ -200,7 +200,7 @@ public abstract class BuildingUnit implements java.io.Serializable {
 	public long getId() {
 		return id;
 	}
-	
+
 	public int getPersonCapacity() {
 		return personCapacity;
 	}
@@ -248,53 +248,54 @@ public abstract class BuildingUnit implements java.io.Serializable {
 	public void setCensusTractId(int censusTractId) {
 		this.censusTractId = censusTractId;
 	}
-	
+
 	public boolean isUsable() {
 		return model.getBuilding(buildingId).isUsable();
 	}
-	
-	public Restaurant getNearestRestaurant(double maxCost){
+
+	public Restaurant getNearestRestaurant(double maxCost) {
 		if (nearestRestaurantCostMap == null) {
 			nearestRestaurantCostMap = new LinkedHashMap<Long, Double>();
 			List<Restaurant> restaurants = model.getNearestRestaurants(getLocation(), 10);
-			
-			for(Restaurant rest: restaurants) {
+
+			for (Restaurant rest : restaurants) {
 				nearestRestaurantCostMap.put(rest.getId(), rest.getFoodCost());
 			}
 		}
-		for (Entry<Long,Double> entry: nearestRestaurantCostMap.entrySet()){
-			
-			if (entry.getValue() <= maxCost){
+		for (Entry<Long, Double> entry : nearestRestaurantCostMap.entrySet()) {
+
+			if (entry.getValue() <= maxCost) {
 				return model.getRestaurant(entry.getKey());
 			}
 		}
 		return null;
 	}
-	
-	public Map<Pub,Double> getNearestPubDistanceMap(int numOfPubs){
-		if (nearestPubDistanceMap == null){
+
+	// TODO: Computational cost is high. Need to optimize.
+	public Map<Pub, Double> getNearestPubDistanceMap(int numOfPubs) {
+		if (nearestPubDistanceMap == null) {
 			nearestPubDistanceMap = new LinkedHashMap<Long, Double>();
 			List<Pub> pubs = model.getNearestPubs(getLocation(), numOfPubs);
-			
-			for(Pub pub: pubs) {
+
+			for (Pub pub : pubs) {
 				double dist = model.getSpatialNetwork().getDistance(getLocation(), pub.getLocation());
 				nearestPubDistanceMap.put(pub.getId(), dist);
 			}
 		}
-		
-		Map<Pub,Double> result = new LinkedHashMap<Pub, Double>();
-		
-		for(Entry<Long,Double> entry: nearestPubDistanceMap.entrySet()){
+
+		Map<Pub, Double> result = new LinkedHashMap<Pub, Double>();
+
+		for (Entry<Long, Double> entry : nearestPubDistanceMap.entrySet()) {
 			result.put(model.getPub(entry.getKey()), entry.getValue());
 		}
-		
+
 		return result;
 	}
-	
+
 	public void resetNearestPubDistanceMap() {
 		nearestPubDistanceMap = null;
 	}
-	
+
 	public void resetNearestRestaurantDistanceMap() {
 		nearestRestaurantCostMap = null;
 	}
