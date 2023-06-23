@@ -166,6 +166,41 @@ cd /home/datapaper/15months/5k/gmu/pol/examples
 cd /home/datapaper/15months/5k/nola/pol/examples
 cd /home/datapaper/15months/5k/sfco/pol/examples
 
+# PREPARING THE DATASET PAPER:
+
+dir=GMU-3K-15
+wc Checkin.tsv 
+zip Checkin.tsv.zip Checkin.tsv  
+rclone copy Checkin.tsv.zip googledrive:/Andreas/DataPaper/$dir/&
+wc SocialNetwork.tsv 
+zip  SocialNetwork.tsv.zip SocialNetwork.tsv  
+rclone copy SocialNetwork.tsv.zip googledrive:/Andreas/DataPaper/$dir/&
+ls -lh
+
+
+sh /home/script/rename.sh
+sh /home/script/fulldata.sh
+
+cut -f 2-4 full.data.tsv > data.tsv
+
+grep -n 2019-07-30T23:55:00.000 data.tsv
+grep -n 2020-09-22T23:55:00.000 data.tsv
+
+1K:
+
+sed -n '8640002,129600001p' data.tsv > train.tsv
+
+sed -n '129600002, $p' data.tsv > test.tsv
+
+3K:
+
+sed -n '41538536,404418535p' data.tsv > train.tsv
+sed -n '404418536, $p' data.tsv > test.tsv
+zip train.tsv.zip train.tsv
+rclone copy train.tsv.zip googledrive:/Andreas/DataPaper/$dir/&
+
+zip test.tsv.zip test.tsv
+rclone copy test.tsv.zip googledrive:/Andreas/DataPaper/$dir/&
 
 
 
