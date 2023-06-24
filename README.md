@@ -13,6 +13,13 @@ Within each folder, you can find three datasets, which correspond to the differe
 
 **As of the SIGSPATIAL' 23 deadline - at 06/24 at 3AM EST, some of these datasets are still being generated. Thus, some of these folders are yet empty. This will be filled within the next few days.**
 
+Statistics of all the datasets can be found in the following table:
+
+![sigspatial_data_resource_table_v1](https://github.com/azufle/pol/assets/20973269/183b2acd-fc54-4f6e-9aeb-7f015053bc99)
+
+
+
+
 
 
 # Patterns-of-Life Simulation
