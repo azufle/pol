@@ -168,11 +168,11 @@ cd /home/datapaper/15months/5k/sfco/pol/examples
 
 # PREPARING THE DATASET PAPER:
 
-dir=SFCO-1K-15
+dir=ATL-5K-15
 cat pattenrs_of_life.log
 
 grep -n -m 1 2020-09-23T00:00:00 Checkin.tsv  
-
+head -n 5837513 Checkin.tsv >> Checkin-1.tsv
 head -n 2507221 Checkin.tsv  > CheckIns.tsv &&
 zip CheckIns.tsv.zip CheckIns.tsv &&
 rclone copy CheckIns.tsv.zip googledrive:/Andreas/DataPaper/$dir/&
