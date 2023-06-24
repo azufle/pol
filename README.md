@@ -7,6 +7,11 @@ The combined datasets are hundreds of GB in size and thus, are too large to be s
 
 https://osf.io/gbhm8/
 
+In this OSF repository, you can find 24 folders. Each folder corresponds one-to-one to one of the datasets described in Table 1 in the paper. Each folder is named MAP-#AGENTS-DURATION. For example, the folder ATL-10k-15mo contains the dataset generated using the Atlanta (ATL) map, using 10,000 agents, and running for 15 months of simulation time. 
+
+Within each folder, you can find three datasets, which correspond to the different types of data generated: Trajectories, Check-ins, and Social Networks. 
+
+**As of the SIGSPATIAL' 23 deadline - at 06/24 at 3AM EST, some of these datasets are still being generated. Thus, some of these folders are yet empty. This will be filled within the next few days.**
 
 
 
