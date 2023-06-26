@@ -1,4 +1,4 @@
-# Hossein Amiri | May 23, 2023
+# Hossein Amiri | June 26, 2023
 
 # Step 1 (Run the simulation):
 
@@ -24,14 +24,10 @@
 
 # Step 2 (Data Preparation)
 
-1. I use hacking/cut.sh to integrate the data and cut only "Tick, Time, Location, Agent ID."
-2. I separate data to three sets: 2 weeks warmup, 2 weeks normal run, 2 weeks abnormal (needle)
-3. I use `head`, `tail` and `sed` linux command to prepare the data I can use only sed to cut a piece of the data.
-4. I commit different configuration c1, c2, c3, etc. for the manipulation
-
-- - c1: red:0, yellow:0.5, and green:0.75 needle as `multiplication` factors for keepingFullTimeInMinutes -> 30 agents in total **different** from agents in c2
-- - c2: red:3, yellow:2, and green:1.5 needle as `multiplication` factors for fullnessDecreasePerStep -> 30 agents in total **different** from agents in c1
-- - c3: red:0, yellow:0.5, and green:0.75 needle as `multiplication` factors for keepingFullTimeInMinutes -> 30 agents in total the **same** agents as in c4
-- - c4: red:3, yellow:2, and green:1.5 needle as `multiplication` factors for fullnessDecreasePerStep -> 30 agents in total the **same** agents as in c3
-- - c5: c3+c4 combine c3 and c4 for each agent -> 30 agents in total agents are the same as in c3 and c4
-- - c6:c1+c2+c5 combine c1, c2, c5 for different agents -> 90 agents in total
+1. Run the simulation you want. If you need a new map, refer to `documentation/map.md`
+1. After the simulation is done, your /examples/logs/logs folder contains `AgentStateTable.tsv` 
+1. If the generated data is larger than the threshold, the simulation will compress 512MB chunks to zip files. So, you need to combine them.
+1. You can use `hacking/fulldata.sh` to combine files in the same folder and then use `cut` && `cat` to combine the output manually.
+1. Alternatively, you can use hacking/cut.sh to integrate the data and cut only "Tick, Time, Location, Agent ID." 
+1. I use the `head`, `tail`, and `sed` Linux commands to prepare the data. You can use only `sed` to cut a piece of the data.
+1. Much of the testing is done manually, and scripts facilitate the process. 
