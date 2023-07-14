@@ -14,7 +14,7 @@ Within each folder, you can find three datasets, which correspond to the differe
 **As of the SIGSPATIAL' 23 deadline - at 06/24 at 3AM EST, some of these datasets are still being generated. Thus, some of these folders are yet empty. This will be filled within the next few days.**
 
 Statistics of all the datasets can be found in the following table (lines marked with starts are still running):
-![image](https://github.com/azufle/pol/assets/80583546/69b35f3e-387f-4449-8363-df6a3310c59c)
+![image](https://github.com/azufle/pol/assets/80583546/f6fa8025-6f75-4896-831f-4c8a4cb00ca7)
 
 
 ## New Study Regions
