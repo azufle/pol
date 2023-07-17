@@ -14,8 +14,7 @@ Within each folder, you can find three datasets, which correspond to the differe
 **As of the SIGSPATIAL' 23 deadline - at 06/24 at 3AM EST, some of these datasets are still being generated. Thus, some of these folders are yet empty. This will be filled within the next few days.**
 
 Statistics of all the datasets can be found in the following table (lines marked with starts are still running):
-![image](https://github.com/azufle/pol/assets/80583546/6ac7e82e-acc5-4443-b7c2-4cc71f427bda)
-
+![image](https://github.com/azufle/pol/assets/80583546/f5ba5b4c-19d6-454d-9af9-038514db2288)
 
 ## New Study Regions
 For researchers to apply our simulation and data generation to new study regions of their interest, instructions on how to obtain foundation data (roads, buildings, units) for a new study region can be found in the documentation folder in file map.md.
