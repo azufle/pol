@@ -1,18 +1,23 @@
 # It cuts the tsv file to "Tick, Time, Location, Agent ID." 
 # It also removes the header line.
-# It can be used just for one folder
-# You need to manually concat the `AgentStateTable` in the root folder 
 
 # RENAME FILES TO MAKE THE RIGHT ORDER:
-# use rename.sh 
+mv AgentStateTable-1.tsv.zip AgentStateTable-01.tsv.zip
+mv AgentStateTable-2.tsv.zip AgentStateTable-02.tsv.zip
+mv AgentStateTable-3.tsv.zip AgentStateTable-03.tsv.zip
+mv AgentStateTable-4.tsv.zip AgentStateTable-04.tsv.zip
+mv AgentStateTable-5.tsv.zip AgentStateTable-05.tsv.zip
+mv AgentStateTable-6.tsv.zip AgentStateTable-06.tsv.zip
+mv AgentStateTable-7.tsv.zip AgentStateTable-07.tsv.zip
+mv AgentStateTable-8.tsv.zip AgentStateTable-08.tsv.zip
+mv AgentStateTable-9.tsv.zip AgentStateTable-09.tsv.zip
 
 # Usage: bash cut.sh
-
 output_file=data.tsv
 echo $output_file
 > $output_file
 rm *.tsv # remove the old files
-for file in AgentStateTable-*.tsv.zip; do
+for file in *.tsv.zip; do
   unzip "$file"
 
 first_file=1

@@ -1,4 +1,4 @@
-# it integrate all the tsv files in a folder into one file.
+# it integrate all the tsv files into one file
 
 # RENAME FILES TO MAKE THE RIGHT ORDER:
 # use rename.sh 
@@ -29,3 +29,4 @@ done
 
 done
 
+tail -n +2 ../AgentStateTable.tsv >> $output_file

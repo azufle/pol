@@ -1,7 +1,7 @@
 # it integrate all the tsv files into one file
 
 # RENAME FILES TO MAKE THE RIGHT ORDER:
-# sh rename.sh 
+# use rename.sh 
 
 # Usage: bash cut.sh
 output_file=full.data.tsv
@@ -10,7 +10,7 @@ echo $output_file
 rm *.tsv # remove the old files
 ls
 echo you should not see any tsv file 
-for file in *.tsv.zip; do
+for file in AgentStateTable-*.tsv.zip; do
   unzip "$file"
 
 first_file=1
@@ -28,6 +28,3 @@ if [ $file != $output_file ]; then
 done
 
 done
-
-tail -n +2 ../AgentStateTable.tsv >> $output_file
-

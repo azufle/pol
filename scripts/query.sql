@@ -28,3 +28,4 @@ SELECT agentId, date( simulationTime), COUNT(*)
 from state
 WHERE date( simulationTime) == '2019-07-4' AND currentMode == "AtWork"
 GROUP BY agentId;
+

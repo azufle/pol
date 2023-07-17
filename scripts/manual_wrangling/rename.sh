@@ -1,4 +1,3 @@
-
 for oldname in AgentStateTable-*.tsv.zip
 do
      num=$(echo $oldname | awk -F '[.-]' '{printf "%03d", $2}')
