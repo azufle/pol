@@ -27,8 +27,10 @@
 1. Run the simulation you want. If you need a new map, refer to `documentation/map.md`
 1. After the simulation is done, your /examples/logs/logs folder contains `AgentStateTable.tsv` 
 1. If the generated data is larger than the threshold, the simulation will compress 512MB chunks to zip files. So, you need to combine them.
-1. You can use `hacking/fulldata.sh` to combine files in the same folder and then use `cut` && `cat` to combine the output manually.
+1. You can use `fulldata.sh` to combine files in the same folder and then use `cut` && `cat` to combine the output manually.
 1. Alternatively, you can use hacking/cut.sh to integrate the data and cut only "Tick, Time, Location, Agent ID." 
 1. I use the `head`, `tail`, and `sed` Linux commands to prepare the data. You can use only `sed` to cut a piece of the data.
 1. Much of the testing is done manually, and scripts facilitate the process. 
 1. I use the `split -b 5GB` command to split the data into `5GB` chunks; you can use `cat` to reverse the split and combine the downloaded OSF files. 
+
+***data_wrangling*** contains more convenient scripts for data wrangling
