@@ -34,4 +34,4 @@ The instructions below were adhered to in order to create the Atlanta map. It's 
 1. Open the geojson file with `QGIS`
 1. Delete all the fields and create an `id`
 1. Update `id` with `@row_number` or your preferred identification mechanism;
-1. Export the features as `buildings.shp` while `EPSG:26916 - NAD83 / UTM zone 16N` is selected for `CRS`
+1. Export the features as `walkways.shp` while `EPSG:26916 - NAD83 / UTM zone 16N` is selected for `CRS`
